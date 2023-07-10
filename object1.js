@@ -32,3 +32,4 @@ myProfile.greetings()
 
 console.log(myProfile.greetings);
 console.log(myProfile.greetings());
+        
