@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #212121; color: #ffff;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName) {
+        const li = document.createElement('li')
+        li.innerHTML = `${langName}`
+
+        document.querySelector('.language').appendChild(li)
+    }
+    addLanguage('phython')
+    addLanguage('html')
+
+    function addoptiLanguage(langName) {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.language').appendChild(li)
+    }
+    addoptiLanguage('React')
+    addoptiLanguage('C++')
+
+    //edit
+
+   const secendLang = document.querySelector('li:nth-child(2)')
+   console.log(secendLang);
+   const newli = document.createElement('li') 
+   newli.innerText = 'mongoDb'
+   secendLang.replaceWith(newli)
+
+   //edit
+
+   const firstLang = document.querySelector('li:first-child')
+   const nli = document.createElement('li')
+   nli.innerText = 'java'
+   firstLang.replaceWith(nli)
+
+   //remove
+   const lastlang = document.querySelector('li:last-child')
+   lastlang.remove()
+</script>
+</html>
